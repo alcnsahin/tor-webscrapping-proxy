@@ -21,7 +21,7 @@ def renew_session():
 
 def change_ip_address():
     with Controller.from_port(port=9051) as controller:
-        controller.authenticate(password="3.14xyz*")
+        controller.authenticate(password="pass")
         controller.signal(Signal.NEWNYM)
         time.sleep(controller.get_newnym_wait())
     print("IP changed...")
